@@ -1,20 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+
+
+
+
 body {
-    background: violet;
+    background:#222;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+
     position: relative;
     width: 100%;
     height: 100%;
     margin: auto;
 
     background: #FFFFFF;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
-.body {
-    margin: auto;
+img { /*Disables image dragging*/
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+
+/* Header */
+
+.container {
+    margin: 0 auto;
     width: 100%;
-    border: 3px solid purple;
-    padding: 10px;
+    padding: auto;
 }
 
+header {
+    background: #b1fc5c;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+    height: 80px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 40px;
+
+    position: relative;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: rgb(250, 81, 2);
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #444;
+
+    position:absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 150ms;
+}
+
+nav a:hover::before {
+    width:100%;
+}
+
+
+/*Footer*/
 .footer {
 
     position: absolute;
