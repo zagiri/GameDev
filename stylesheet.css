@@ -23,6 +23,7 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+
 }
 
 img { /*Disables image dragging*/
@@ -70,7 +71,8 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 70px;
+    right: 20px;
+    margin-left: 80px;
     padding-top: 40px;
 
     position: relative;
@@ -163,11 +165,11 @@ nav a:hover::before {
 
 
 
-#img-container img {
-    max-width: 300px;
-    height: auto;
-    padding-left: 40%;
-    top: 20%;
+#img-container {
+    max-width: 15%;
+    display: block;
+    margin-left: 40%;
+    margin-right: auto;
 }
 
 #footer-sign ul img {
