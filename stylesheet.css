@@ -32,7 +32,7 @@ img { /*Disables image dragging*/
     -o-user-drag: none;
     user-drag: none;
 }
-
+/* Styling for Game */
 Game-Images {
     position: relative;
     left: 2.5%;
@@ -41,7 +41,7 @@ Game-Images {
     margin: 20px;
     height: 25em;
 }
-
+/* End of styling for Game */
 /* Header */
 
 .container {
@@ -115,7 +115,6 @@ nav a:hover::before {
 
 
 /*STORE PAGE*/
-/*ligma balls*/
 .shop-items {
     width: 80%;
     height: 1000px;
