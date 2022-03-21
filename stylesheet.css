@@ -108,6 +108,8 @@ nav a:hover::before {
 
 
 #cart-icon {
+    position: relative;
+    top: 0.2rem;
     font-size:1.8rem;
     cursor: pointer;
 }
@@ -117,8 +119,8 @@ nav a:hover::before {
     color: black;
     font-weight: 600;
     font-family: 'Press Start 2P', cursive;
-    top: 2.3rem;
-    right: 2rem;
+    top: 2.5rem;
+    right: 2.3rem;
 
 
 }
@@ -246,6 +248,13 @@ Game-Images {
     margin: 20px;
     height: 25em;
 }
+
+.game-box img {
+    width: 200px;
+    height: auto;
+}
+
+
 /* End of styling for Game */
 
 

@@ -52,18 +52,34 @@ function ready() {
 
     document.getElementsByClassName('btn-buy')[0].addEventListener('click', buyButtonClicked);
 
+    // clears cart on startup
+    var cartContent = document.getElementsByClassName('cart-content')[0];
+    if (cartContent.hasChildNodes()) {
+        while  (cartContent.hasChildNodes()){
+            cartContent.removeChild(cartContent.firstChild);
+        }
+        updateTotal()
+    }
+
 }
 
 
 //purchase
 function  buyButtonClicked() {
-    alert('your Order is placed');
-
     var cartContent = document.getElementsByClassName('cart-content')[0];
-    while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild);
+
+    if (cartContent.hasChildNodes()) {
+        alert('your Order is placed');
+
+        while  (cartContent.hasChildNodes()){
+            cartContent.removeChild(cartContent.firstChild);
+        }
+        updateTotal()
+    } else {
+        alert('please add item to cart');
+        return;
     }
-    updateTotal()
+
 }
 
 //add cart button
