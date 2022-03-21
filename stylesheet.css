@@ -253,7 +253,13 @@ nav a:hover::before {
     width: 30rem;
     height: auto;
 }
+.Text-placement {
+    Position: relative;
+    right: 45%;
+    color: white;
+    bottom: 38%;
 
+}
 
 /* End of styling for Game */
 
