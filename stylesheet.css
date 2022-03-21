@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Francois+One&family=Press+Start+2P&display=swap');
 
 
 
@@ -33,6 +32,10 @@ img { /*Disables image dragging*/
     user-drag: none;
 }
 /* Header */
+
+section {
+    padding: 4rem 0 3rem;
+}
 
 .container {
     margin: 0 auto;
@@ -104,6 +107,135 @@ nav a:hover::before {
 }
 
 
+#cart-icon {
+    font-size:1.8rem;
+    cursor: pointer;
+}
+.bag-quantity {
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-family: 'Press Start 2P', cursive;
+    top: 2.3rem;
+    right: 2rem;
+
+
+}
+
+/*cart*/
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: white;
+
+    z-index: 100;
+
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    -webkit-box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    -moz-box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+
+    transition: 0.3s;
+}
+
+.cart.active {
+    right: 0;
+}
+
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart-box {
+   display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cart-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-quantity {
+    border: 1px solid black;
+    outline-color: #444444;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove {
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: 0.5rem;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: green;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-buy:hover {
+    background: black;
+}
+
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* end of header*/
+
+
+
+
 
 /* Styling for Game */
 Game-Images {
@@ -118,43 +250,105 @@ Game-Images {
 
 
 /*STORE PAGE*/
-.shop-items {
-    width: 100%;
-    height: 1000px;
-    border-style: solid;
-    border-color: green;
+
+.shop {
+    margin-top: 2rem;
+}
+
+.section-title {
+
+    width: 80%;
     margin: 0 auto;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+
+
+    padding: 1.5rem 0;
+    border-bottom: 1px solid black;
+}
+
+.shop-items {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px,auto));
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    width: 78%;
+    height: auto;
+    margin: 0 auto;
+
 }
 
 .shop-item {
     position: relative;
-    left: 2.5%;
-    float: left;
-
+    /*left: 2%;*/
+    /*float: left;*/
+    width: auto;
     margin: 20px;
     height: 25em;
 
-    border-style: solid;
-    border-color: green;
+
+    box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+
+.shop-item:hover {
+    margin: 10px;
+    transition: 0.3s;
 }
 
 .shop-item img {
-    display: flex;
-    width: 20em;
-    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 10em;
+
 }
 .shop-item-details {
-    width: 200px;
-    height: 100px;
-    display: inline-block;
-    align-items: center;
-    border-style: solid;
-    border-color: green;
+
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    padding: 50px 20px;
+    display: grid;
 }
 .shop-item-title {
     font-size: 35px;
 
+    font-family: 'Francois One', sans-serif;
 }
+
+.shop-item-price {
+    font-size: 16px;
+    padding: 0 0 10px 0;
+    font-family: 'Francois One', sans-serif;
+}
+
+
+
+.shop-item-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px ;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-item-button:hover {
+    background: hsl(249,32%, 17%);
+    transition: 0.3s;
+}
+
 
 /*END OF STORE PAGE*/
 
@@ -200,7 +394,7 @@ Game-Images {
     position: relative;
     max-width: 100%;
     height: 650px;
-    top: 1060px;
+    top: auto;
 
     background: #F3F3F3;
 
