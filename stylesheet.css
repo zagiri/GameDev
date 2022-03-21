@@ -240,17 +240,17 @@ nav a:hover::before {
 
 
 /* Styling for Game */
-Game-Images {
+.Game-Images {
     position: relative;
-    left: 2.5%;
-    float: left;
-
-    margin: 20px;
-    height: 25em;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
 }
 
 .game-box img {
-    width: 200px;
+    width: 30rem;
     height: auto;
 }
 
