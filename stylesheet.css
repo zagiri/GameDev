@@ -276,7 +276,7 @@ Game-Images {
     grid-template-columns: repeat(auto-fill, minmax(220px,auto));
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     width: 78%;
-    height: 1000px;
+    height: auto;
     margin: 0 auto;
 
 }
@@ -293,6 +293,7 @@ Game-Images {
     box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    transition: 0.3s;
 }
 
 .shop-item:hover {
@@ -340,10 +341,12 @@ Game-Images {
     font-family: 'Anton', sans-serif;
     font-size: 20px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .shop-item-button:hover {
     background: hsl(249,32%, 17%);
+    transition: 0.3s;
 }
 
 
