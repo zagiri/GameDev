@@ -21,7 +21,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <i class='bx bxs-shopping-bag' id="cart-icon"></i>
-                    <div class="bag-quantity">0</div>
+                    <span class="bag-quantity">0</span>
                     <div class="cart">
                         <h2 class="cart-title">Your Cart</h2>
                         <!--Content-->
@@ -43,6 +43,91 @@
     </header>
 
     <!-- Body  -->
+
+
+    <!--billing form-->
+        <div class="billing-form">
+            <div class="billing-title"><h2 class="form-name">Billing Form</h2></div>
+            <form class="form" id="form" action="/" method="get">
+                <div class="form-control">
+                    <label>Full name</label>
+                    <input  id="name" type="text" placeholder="Name">
+                    <i class='bx bxs-check-circle'></i>
+                    <i class='bx bxs-error-circle' ></i>
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control" id="none">
+                    <label>Email</label>
+                    <input  id="email" type="email" placeholder="Email Address">
+                    <i class='bx bxs-check-circle'></i>
+                    <i class='bx bxs-error-circle' ></i>
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label>Confirm Email</label>
+                    <input  id="confirm-email" type="email" placeholder="Confirm Email Address">
+                    <i class='bx bxs-check-circle'></i>
+                    <i class='bx bxs-error-circle' ></i>
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label>Phone Number</label>
+                    <input  id="phone" type="number" placeholder="Phone No.">
+                    <i class='bx bxs-check-circle'></i>
+                    <i class='bx bxs-error-circle' ></i>
+                    <small>Error Message</small>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+            <!--Content-->
+<!--            <div class="form-content">-->
+<!--                <form id="form" action="#" method="get">-->
+<!--                    <div>-->
+<!--                        <div class="error" id="1"></div>-->
+<!--                        <label class="form-title" for="name">Full name</label>-->
+<!--                        <input class="form-input" id="name" name="Full name" type="text">-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <div class="error" id="2"></div>-->
+<!--                        <label class="form-title" for="email">Email</label>-->
+<!--                        <input class="form-input" id="email" name="Email" type="email">-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <div class="error" id="3"></div>-->
+<!--                        <label class="form-title" for="email-confirm">Confirm Email</label>-->
+<!--                        <input class="form-input" id="email-confirm" name="email confirmation" type="email">-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <div class="error" id="4"></div>-->
+<!--                        <label class="form-title" for="phone">Phone number</label>-->
+<!--                        <input class="form-input" id="phone" name="Phone Number" type="number" placeholder="+64 00-0000-0000">-->
+<!--                    </div>-->
+<!--                    <div id="drop-down-list">-->
+<!--                    </div>-->
+<!--                    <div id="check-box">-->
+<!--                        <input id="terms" type="checkbox">-->
+<!--                        <label class="form-title" for="terms">Must accept Terms and conditions</label>-->
+<!--                    </div>-->
+<!--                    <button type="submit">Submit</button>-->
+<!--                </form>-->
+
+
+
+<!--            </div>-->
+            <!--Total-->
+<!--            <div class="total form-total">-->
+<!--                <div class="total-title form-total-title">Total</div>-->
+<!--                <div class="total-price form-price">$0.00</div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;purchase button&ndash;&gt;-->
+<!--            <button type="button" class="btn-complete">Complete Purchase</button>-->
+<!--            &lt;!&ndash;cart close&ndash;&gt;-->
+<!--            <i class='bx bx-x' id="close-form"></i>-->
+<!--        </div>-->
+    <!--billing form end-->
+
 
         <section class="shop content-section">
             <h2 class="section-title">Browse Games</h2>

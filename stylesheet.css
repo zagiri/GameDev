@@ -114,16 +114,136 @@ nav a:hover::before {
     cursor: pointer;
 }
 .bag-quantity {
-    position: absolute;
+    position: relative;
     text-align: center;
     color: black;
     font-weight: 600;
     font-family: 'Press Start 2P', cursive;
-    top: 2.5rem;
-    right: 2.3rem;
-
 
 }
+
+
+/*Billing form*/
+.billing-form {
+
+    display: inline-block;
+    width:  400px;
+    max-width: 100%;
+
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    left: 40%;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+    font-family: 'Open Sans', sans-serif;
+
+    z-index: 101;
+}
+
+.billing-title {
+    background: #4CAF50;
+    border-bottom: 1px solid #F0F0F0;
+
+    padding: 20px 40px;
+}
+
+.billing-title h2 {
+    margin: 0;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid grey;
+    border-radius: 4px;
+    display: block;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-control.success input {
+    border-color: springgreen;
+}
+.form-control.success i.bxs-check-circle {
+    color: springgreen;
+    visibility: visible;
+}
+
+.form-control.error input {
+    border-color: indianred;
+}
+
+.form-control.error i.bxs-error-circle {
+    color: indianred;
+    visibility: visible;
+}
+
+
+.form-control i {
+    position: absolute;
+    top: 36px;
+    right: -10px;
+    font-size: 25px;
+    visibility: hidden;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    visibility: hidden;
+}
+.form-control.error small {
+    color: indianred;
+    visibility: visible;
+}
+
+#active small {
+    font-size: 11px;
+    font-weight: 600;
+    color: darkgrey;
+    visibility: visible;
+}
+
+.form button {
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+    display: block;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+
+
+
+/*billing form end*/
+
+
 
 /*cart*/
 .cart {

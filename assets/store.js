@@ -4,6 +4,125 @@ let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
 
+// form
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const confirmEmail = document.getElementById('confirm-email');
+const phoneNo = document.getElementById('phone');
+
+form.addEventListener('submit', (e) => {
+    checkInputs();
+    e.preventDefault()
+});
+
+email.addEventListener('focusin', (e) => {
+    emailAlert()
+});
+
+email.addEventListener('focusout', (e) => {
+    timeOut()
+});
+
+
+function emailAlert(){
+    const formControl = email.parentElement;
+    const small = formControl.querySelector('small');
+    small.innerText = 'Email must be correct as it will be used for Confirmation'
+
+    formControl.id = 'active';
+    // timeOut()
+
+    console.log(formControl.id)
+    console.log(small.innerText)
+
+}
+
+function timeOut() {
+    const formControl = email.parentElement;
+    setTimeout(function(){formControl.id = 'none';}, 2000);
+}
+
+function checkInputs(){
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const confirmValue = confirmEmail.value.trim();
+    const phoneValue = phoneNo.value.trim();
+    var count = 0
+
+    // Alert user on type
+    const formControl = email.parentElement;
+    const small = formControl.querySelector('small');
+    small.innerText = 'Email must be correct as it will be used for Confirmation'
+    formControl.id = 'none';
+
+    if (nameValue === '' || nameValue == null) {
+
+        setErrorFor(name, 'Username cannot be blank');
+    } else {
+        setSuccessFor(name);
+        count += 1
+    }
+    if (emailValue === '' || emailValue == null) {
+        setErrorFor(email, 'Email address cannot be blank');
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(email, 'Email is not valid');
+    } else if (emailValue != confirmValue) {
+        setErrorFor(email, 'Email does not match');
+    } else {
+        setSuccessFor(email);
+        count += 1
+    }
+
+    if (confirmValue === '' || confirmValue == null) {
+
+        setErrorFor(confirmEmail, 'Email address cannot be blank');
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(confirmEmail, 'Email is not valid');
+    } else if (emailValue !== confirmValue) {
+        setErrorFor(email, 'Email does not match');
+    } else {
+        setSuccessFor(confirmEmail);
+        count += 1
+    }
+
+    if (phoneValue === '' || phoneValue == null) {
+
+        setErrorFor(phoneNo, 'Phone No. cannot be blank');
+    } else {
+        setSuccessFor(phoneNo);
+        count += 1
+    }
+
+
+    if (count === 4) {
+        alert("Good job")
+    } else {
+        console.log(count)
+    }
+
+
+}
+
+function setErrorFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+    small.innerText = message
+
+    formControl.className = 'form-control error';
+}
+
+function setSuccessFor(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+
+}
+
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+
 //open cart
 cartIcon.onclick = () => {
     cart.classList.add("active");
