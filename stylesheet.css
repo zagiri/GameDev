@@ -372,6 +372,12 @@ nav a:hover::before {
 .game-box img {
     width: 30rem;
     height: auto;
+    transition: 0.5s;
+    filter: brightness(50%);
+}
+.game-box:hover img {;
+    transition: 0.5s;
+    filter: brightness(100%);
 }
 .Text-placement {
     Position: relative;
