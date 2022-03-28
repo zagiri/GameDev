@@ -384,8 +384,16 @@ nav a:hover::before {
     right: 45%;
     color: white;
     bottom: 38%;
-
 }
+.Text-placement:hover {
+    -webkit-transition: color 1s;
+    transition: 1s;
+    }
+    hover {
+        colour: black;
+    }
+
+
 
 /* End of styling for Game */
 
