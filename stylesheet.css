@@ -388,7 +388,7 @@ nav a:hover::before {
 .game-box:hover .Text-placement{
     -webkit-transition: color 1s;
     transition: 1s;
-    color: silver;
+    color: greenyellow;
     font-size: 20px;
     }
 
