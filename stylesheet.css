@@ -375,22 +375,21 @@ nav a:hover::before {
     transition: 0.5s;
     filter: brightness(50%);
 }
-.game-box:hover img {;
-    transition: 0.5s;
-    filter: brightness(100%);
-}
+/*.game-box:hover img {;*/
+/*    transition: 0.5s;*/
+/*    filter: brightness(100%);*/
+/*}*/
 .Text-placement {
     Position: relative;
     right: 45%;
     color: white;
     bottom: 38%;
 }
-.Text-placement:hover {
+.game-box:hover .Text-placement{
     -webkit-transition: color 1s;
     transition: 1s;
-    }
-    hover {
-        colour: black;
+    color: silver;
+    font-size: 20px;
     }
 
 
