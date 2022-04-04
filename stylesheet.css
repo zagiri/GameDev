@@ -520,8 +520,20 @@ nav a:hover::before {
 
 /*END OF STORE PAGE*/
 
+/*START OF CONTACT PAGE*/
+.StaffContactImages {
+    width: auto;
+    margin: 5px;
+    height: 25em;
+}
+.StaffContactText {
 
+}
+h4 {
+    display: inline;
+}
 
+/*END OF CONTACT PAGE*/
 
 
 
