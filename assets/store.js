@@ -24,6 +24,10 @@ email.addEventListener('focusout', (e) => {
     timeOut()
 });
 
+form.addEventListener('reset', (e) => {
+    reset()
+    e.preventDefault()
+});
 
 function emailAlert(){
     const formControl = email.parentElement;
@@ -42,6 +46,39 @@ function timeOut() {
     const formControl = email.parentElement;
     setTimeout(function(){formControl.id = 'none';}, 2000);
 }
+
+function reset() {
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const confirmValue = confirmEmail.value.trim();
+    const phoneValue = phoneNo.value.trim();
+
+    const formControl = email.parentElement;
+    const small = formControl.querySelector('small');
+    small.innerText = 'Email must be correct as it will be used for Confirmation'
+    formControl.id = 'none';
+
+    if (nameValue !== '' || nameValue != null) {
+
+        setResetFor(name);
+    }
+    if (emailValue !== '' || emailValue != null) {
+        setResetFor(email);
+    }
+
+    if (confirmValue !== '' || confirmValue != null) {
+
+        setResetFor(confirmEmail);
+    }
+
+    if (phoneValue !== '' || phoneValue != null) {
+
+        setResetFor(phoneNo);
+    }
+
+
+}
+
 
 function checkInputs(){
     const nameValue = name.value.trim();
@@ -116,6 +153,15 @@ function setSuccessFor(input) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
 
+}
+
+function setResetFor(input) {
+    let value = input;
+
+    value.value = '';
+
+    const formControl = input.parentElement;
+    formControl.className = 'form-control';
 }
 
 function isEmail(email) {

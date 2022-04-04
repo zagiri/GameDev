@@ -175,6 +175,7 @@ nav a:hover::before {
     border-radius: 4px;
     display: block;
     padding: 10px;
+    margin: 0 0 10px 0;
     font-family: inherit;
     font-size: 14px;
     width: 100%;
@@ -224,12 +225,15 @@ nav a:hover::before {
     visibility: visible;
 }
 
-.form button {
+.form button[type=submit] {
     background-color: darkred;
     border: 2px solid darkred;
     color: white;
+
     display: block;
     border-radius: 4px;
+    margin: 10px 0;
+
     font-family: inherit;
     font-size: 16px;
     padding: 10px;
@@ -237,6 +241,26 @@ nav a:hover::before {
 
     cursor: pointer;
 }
+
+.form button[type=reset] {
+    background-color: grey;
+    border: 2px solid grey;
+    color: white;
+
+
+    display: block;
+    border-radius: 4px;
+    margin: 0 auto;
+
+
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px 5px;
+    width: 50%;
+
+    cursor: pointer;
+}
+
 
 
 
@@ -360,40 +384,37 @@ nav a:hover::before {
 
 
 /* Styling for Game */
-.Game-Images {
-    position: relative;
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
+
+.game {
+    margin-top: 2rem;
+}
+
+.image-section {
+
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2, minmax(250px,1fr));
+    width: 78%;
+    height: auto;
+    margin: 0 auto;
+    border: solid 10px red;
+}
+
+.game-box {
+    position: relative;
+    width: auto;
+    margin: 20px;
+    height: 25em;
+    border: solid 10px pink;
+
 }
 
 .game-box img {
-    width: 30rem;
-    height: auto;
-    transition: 0.5s;
-    filter: brightness(50%);
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 23em;
+
 }
-/*.game-box:hover img {;*/
-/*    transition: 0.5s;*/
-/*    filter: brightness(100%);*/
-/*}*/
-.Text-placement {
-    Position: relative;
-    right: 45%;
-    color: white;
-    bottom: 38%;
-}
-.game-box:hover .Text-placement{
-    -webkit-transition: color 1s;
-    transition: 1s;
-    color: silver;
-    font-size: 20px;
-    }
-
-
-
 /* End of styling for Game */
 
 
@@ -421,7 +442,6 @@ nav a:hover::before {
 .shop-items {
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px,auto));
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     width: 78%;
     height: auto;
