@@ -303,10 +303,18 @@ nav a:hover::before {
 .bottomStaff {
 
     display: grid;
-
-    grid-template-columns: repeat(2, 696px);
+    grid-template-columns: repeat(2, minmax(10px, 696px));
+}
+.bottomStaff img {
+    width: 100%;
+    height: auto;
 }
 
+.sideStaff {
+    margin: 0 5vw;
+    width: 50vw;
+    font-size: 0.7vw;
+}
 
 
 /*cart*/
