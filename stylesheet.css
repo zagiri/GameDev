@@ -4,7 +4,6 @@
 
 
 body {
-    background: #FFFFFF;
     font-family: "Work Sans", sans-serif;
     font-weight: 400;
 
@@ -122,30 +121,6 @@ nav a:hover::before {
     font-weight: 600;
     font-family: 'Press Start 2P', cursive;
 
-}
-
-
-
-
-
-/*Home*/
-
-
-.parallax {
-    background: url("/assets/parallax_background.png") repeat fixed 100%;
-}
-
-
-.parallax-inner {
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-
-.parallax-inner h1 {
-
-    text-align: center;
-    font-size: 500%;
-    color: white;
 }
 
 /*Billing form*/

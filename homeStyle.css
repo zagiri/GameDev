@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Francois+One&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#447caa, #99def6);
+}
+
+
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #172339;
+    z-index: 100;
+
+    box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
+
+
+    font-size: 1vw;
+    font-family: 'Francois One', sans-serif;
+}
+
+header img{
+    width: 30%;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+    transition: 300ms;
+}
+
+header ul li a:hover, header ul li a.active {
+    background: white;
+    color: #447caa;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #447caa, transparent);
+    z-index: 10000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section img#darkerBlueTree {
+    z-index: 10;
+
+}
+
+#text {
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 3.5vw;
+    z-index: 9;
+    transform: translatey(-100px);
+
+    font-family: 'Francois One', sans-serif;
+    text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #447caa;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.sec p {
+    font-size: 1em;
+    color: white;
+}
