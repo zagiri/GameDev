@@ -352,7 +352,6 @@ header ul li a:hover, header ul li a.active {
 .card-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding-bottom: 2rem;
 }
 

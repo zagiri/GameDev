@@ -354,9 +354,6 @@ function updateTotal() {
 
 
 
-
-
-
     var bag_size = 0;
     var total = 0;
 
