@@ -128,6 +128,8 @@ header ul li a:hover, header ul li a.active {
 /*Billing form*/
 
 
+
+
 #close-billing {
     position: absolute;
     top: 0.2rem;
@@ -165,6 +167,7 @@ header ul li a:hover, header ul li a.active {
     opacity: 0;
 }
 
+
 .billing-form {
 
     width:  65%;
@@ -191,7 +194,11 @@ header ul li a:hover, header ul li a.active {
     transition: 0.5s;
 }
 
-
+@media only screen and (max-width: 1520px) {
+    .billing-form {
+        position: relative;
+    }
+}
 
 .billing-details {
     width: 100%;
@@ -346,6 +353,7 @@ header ul li a:hover, header ul li a.active {
 
     margin: 30px auto;
 
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -372,15 +380,15 @@ header ul li a:hover, header ul li a.active {
 
     width: 5vw;
 
-    background: none;
-    border: none;
-    border-bottom: 0.125rem dashed grey;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
 
     font-size: 1.2rem;
     color: black;
 
     margin: 0 10px;
     text-align: center;
+
 }
 
 .card-input-large {
@@ -388,7 +396,7 @@ header ul li a:hover, header ul li a.active {
     font-size: 1.6rem;
     text-align: left;
     padding: 0 10px;
-    margin-bottom: 20px;
+    margin: 20px 0 ;
 }
 
 .card-input:focus {
