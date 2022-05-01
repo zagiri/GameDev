@@ -4,12 +4,30 @@ let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
 
+// billing form
+let closeBilling = document.querySelector('#close-billing')
+let billingContainer = document.querySelector(".billing-container");
+let billingForm = document.querySelector(".billing-form");
+
+
 // form
 const form = document.getElementById('form');
+const button = document.getElementsByClassName('form-button')
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const confirmEmail = document.getElementById('confirm-email');
 const phoneNo = document.getElementById('phone');
+
+//disable card at startup
+const cardNum = document.getElementById('cardNumber')
+const cardExpiry = document.getElementById('cardExpiry')
+const cardCCV = document.getElementById('cardCCV')
+const checkoutButton = document.getElementById('checkout')
+
+cardNum.disabled = true
+cardExpiry.disabled = true
+cardCCV.disabled = true
+checkoutButton.disabled = true
 
 form.addEventListener('submit', (e) => {
     checkInputs();
@@ -85,6 +103,8 @@ function checkInputs(){
     const emailValue = email.value.trim();
     const confirmValue = confirmEmail.value.trim();
     const phoneValue = phoneNo.value.trim();
+
+
     var count = 0
 
     // Alert user on type
@@ -133,7 +153,10 @@ function checkInputs(){
 
 
     if (count === 4) {
-        alert("Good job")
+        cardNum.disabled = false
+        cardExpiry.disabled = false
+        cardCCV.disabled = false
+        checkoutButton.disabled = false
     } else {
         console.log(count)
     }
@@ -162,6 +185,11 @@ function setResetFor(input) {
 
     const formControl = input.parentElement;
     formControl.className = 'form-control';
+
+    cardNum.disabled = true
+    cardExpiry.disabled = true
+    cardCCV.disabled = true
+    checkoutButton.disabled = true
 }
 
 function isEmail(email) {
@@ -180,6 +208,14 @@ closeCart.onclick = () => {
     cart.classList.remove("active");
 };
 
+
+//close billing form
+
+closeBilling.onclick = () => {
+    cart.classList.add("active");
+    billingForm.className = "billing-form disable"
+    billingContainer.className = "billing-container disable"
+};
 
 
 // cart working
@@ -233,8 +269,12 @@ function ready() {
 function  buyButtonClicked() {
     var cartContent = document.getElementsByClassName('cart-content')[0];
 
+
     if (cartContent.hasChildNodes()) {
-        alert('your Order is placed');
+
+        cart.classList.remove("active");
+        billingForm.className = "billing-form"
+        billingContainer.className = "billing-container"
 
         while  (cartContent.hasChildNodes()){
             cartContent.removeChild(cartContent.firstChild);

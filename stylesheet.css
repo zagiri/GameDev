@@ -65,7 +65,7 @@ header {
     align-items: center;
 
     background: #172339;
-    z-index: 100;
+    z-index: 4;
 
     box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
     -webkit-box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
@@ -126,30 +126,94 @@ header ul li a:hover, header ul li a.active {
 }
 
 /*Billing form*/
+
+
+#close-billing {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.billing-container.disable {
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+
+    visibility: hidden;
+
+    transition: .5s;
+}
+
+.billing-container {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+
+    transition: 2.5s;
+
+}
+
+.billing-form.disable {
+    margin: 20% auto;
+    opacity: 0;
+}
+
 .billing-form {
 
-    display: inline-block;
-    width:  400px;
-    max-width: 100%;
+    width:  65%;
+    height: auto;
 
-    position: relative;
+    position: sticky;
     align-items: center;
     justify-content: center;
-    top:0;
-    left: 40%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 10% auto;
 
+    background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2%;
     overflow: hidden;
 
     font-family: 'Open Sans', sans-serif;
-
     z-index: 101;
+
+    opacity: 1;
+
+    transition: 0.5s;
+}
+
+
+
+.billing-details {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.checkout-form {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(490px,auto));
+}
+
+.form {
+
+    padding: 30px 40px;
 }
 
 .billing-title {
-    background: #4CAF50;
+    background: #447caa;
     border-bottom: 1px solid #F0F0F0;
 
+    text-align: center;
     padding: 20px 40px;
 }
 
@@ -157,15 +221,13 @@ header ul li a:hover, header ul li a.active {
     margin: 0;
 }
 
-.form {
-    padding: 30px 40px;
-}
 
 .form-control {
     margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
 }
+
 
 .form-control label {
     display: inline-block;
@@ -227,6 +289,13 @@ header ul li a:hover, header ul li a.active {
     visibility: visible;
 }
 
+
+.form-buttons {
+    display: grid;
+    column-gap: 2.5em;
+    grid-template-columns: repeat(2, auto);
+}
+
 .form button[type=submit] {
     background-color: darkred;
     border: 2px solid darkred;
@@ -234,11 +303,11 @@ header ul li a:hover, header ul li a.active {
 
     display: block;
     border-radius: 4px;
-    margin: 10px 0;
+    margin: 10px auto;
 
     font-family: inherit;
     font-size: 16px;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
 
     cursor: pointer;
@@ -249,16 +318,14 @@ header ul li a:hover, header ul li a.active {
     border: 2px solid grey;
     color: white;
 
-
     display: block;
     border-radius: 4px;
-    margin: 0 auto;
-
+    margin: 10px auto;
 
     font-family: inherit;
     font-size: 16px;
-    padding: 10px 5px;
-    width: 50%;
+    padding: 10px;
+    width: 100%;
 
     cursor: pointer;
 }
@@ -268,6 +335,102 @@ header ul li a:hover, header ul li a.active {
 
 /*billing form end*/
 
+/*Credit card styes*/
+
+.card {
+    width: 90%;
+    height: 90%;
+
+    padding: 50px;
+    border: 0.12rem solid grey;
+
+    margin: 30px auto;
+
+}
+
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.5vw;
+    color: #172339;
+    margin: 0 0 3rem 0 ;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-col {
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-input {
+
+    width: 5vw;
+
+    background: none;
+    border: none;
+    border-bottom: 0.125rem dashed grey;
+
+    font-size: 1.2rem;
+    color: black;
+
+    margin: 0 10px;
+    text-align: center;
+}
+
+.card-input-large {
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.card-input:focus {
+    outline: none;
+    border-color: dimgrey;
+}
+
+.card-input:disabled {
+    background: lightgrey;
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+#checkout:disabled {
+    background: lightgrey;
+    color: grey;
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+.billing button[type=checkout] {
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+
+    display: block;
+    border-radius: 4px;
+    margin: 10px auto;
+
+    font-family: inherit;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+
+/*end card styles*/
 
 
 /*Staff*/
@@ -613,7 +776,7 @@ h4 {
     display: inline;
 }
 /*Start of contact form*/
-input[type=text], select, textarea {
+.ContactForm input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */
     border: 1px solid #ccc; /* Gray border */
@@ -625,7 +788,7 @@ input[type=text], select, textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+.ContactForm input[type=submit] {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -635,7 +798,7 @@ input[type=submit] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+.ContactForm input[type=submit]:hover {
     background-color: #45a049;
 }
 
