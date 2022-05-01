@@ -78,7 +78,76 @@
 
     <!-- Body  -->
 
-        <section class="shop featured-section">
+    <!--billing form-->
+    <div class="billing-container disable">
+        <div class="billing-form disable">
+            <i class='bx bx-x' id="close-billing"></i>
+            <div class="checkout-form">
+                <form class="form" id="form" action="/" method="get">
+                    <div class="billing-details">
+                        <div class="form-control">
+                            <label>Full name</label>
+                            <input id="name" type="name" placeholder="Name">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control" id="none">
+                            <label>Email</label>
+                            <input  id="email" type="email" placeholder="Email Address">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Confirm Email</label>
+                            <input  id="confirm-email" type="email" placeholder="Confirm Email Address">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Phone Number</label>
+                            <input  id="phone" type="number" placeholder="Phone No.">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="" class="billing">
+                    <div class="card">
+                        <h1 class="card-title">
+                            Enter Payment Information
+                        </h1>
+                        <div class="card-row">
+                            <div class="card-col card-num">
+                                <label for="cardNumber" class="card-label">Card Number</label>
+                                <input type="text" class="card-input card-input-large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
+                            </div>
+                            <div class="card-row">
+                                <div class="card-col"><label for="cardExpiry" class="card-label">Expiry Date</label><input type="text" class="card-input" id="cardExpiry" placeholder="xx/xx"></div>
+                            </div>
+                            <div class="card-row">
+                                <div class="card-col"><label for="cardCCV" class="card-label"></label>CCV<input type="text" class="card-input" id="cardCCV" placeholder="xxx"></div>
+                            </div>
+                        </div>
+                        <button type="checkout" id="checkout">Checkout</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--billing form end-->
+
+
+
+    <section class="shop featured-section">
             <h2 class="featured-title">Featured Game</h2>
             <div class="featured-shop-items">
                 <div class="featured-game"><img src="/assets/Bundle.jpg" class="shop-item-image"></div>
@@ -194,48 +263,6 @@
         </div>
     </section>
 
-
-    <!--billing form-->
-    <div class="billing-form">
-        <div class="billing-title"><h2 class="form-name">Billing Form</h2></div>
-        <form class="form" id="form" action="/" method="get">
-            <div class="form-control">
-                <label>Full name</label>
-                <input  id="name" type="name" placeholder="Name">
-                <i class='bx bxs-check-circle'></i>
-                <i class='bx bxs-error-circle' ></i>
-                <small>Error Message</small>
-            </div>
-            <div class="form-control" id="none">
-                <label>Email</label>
-                <input  id="email" type="email" placeholder="Email Address">
-                <i class='bx bxs-check-circle'></i>
-                <i class='bx bxs-error-circle' ></i>
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label>Confirm Email</label>
-                <input  id="confirm-email" type="email" placeholder="Confirm Email Address">
-                <i class='bx bxs-check-circle'></i>
-                <i class='bx bxs-error-circle' ></i>
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label>Phone Number</label>
-                <input  id="phone" type="number" placeholder="Phone No.">
-                <i class='bx bxs-check-circle'></i>
-                <i class='bx bxs-error-circle' ></i>
-                <small>Error Message</small>
-            </div>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-        </form>
-    </div>
-    <!--billing form end-->
-
-
-
-    <!-- Body  -->
         <footer>
             <!-- footer section -->
             <div class="footer">
