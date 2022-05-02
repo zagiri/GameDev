@@ -449,7 +449,7 @@ header ul li a:hover, header ul li a.active {
 .staffName {
     flex-grow: 4;
 }
-
+/**/
 .mainStaff {
     width: 15vw;
     max-height: 10vw;
