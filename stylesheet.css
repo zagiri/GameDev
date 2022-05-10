@@ -454,33 +454,82 @@ header ul li a:hover, header ul li a.active {
 
 
 /*Staff*/
-
 .Staff {
     width: 75%;
     margin: 0 auto;
+    text-align: center;
 }
-
-.mainStaff {
-    width: 15vw;
-    max-height: 10vw;
-
-    margin-bottom: 40px;
+.staffName {
+    flex-grow: 4;
 }
+/**/
+/*.mainStaff {*/
+/*    width: 15vw;*/
+/*    max-height: 10vw;*/
+/*    margin-bottom: 40px;*/
+/*}*/
 
-.bottomStaff {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(30px, 18vw));
+/*.bottomStaff {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(2, minmax(30px, 18vw));*/
+/*}*/
+/*.bottomStaff img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.sideStaff {*/
+/*    margin: 0 5vw;*/
+/*    width: 50vw;*/
+/*    font-size: 0.7vw;*/
+/*}*/
+.staffColumn {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
 }
-.bottomStaff img {
+@media screen and (max-width: 650px) {
+    .staffColumn {
+        width: 100%;
+        display: block;
+    }
+}
+.staffCard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+/*.staffCard img {*/
+/*    width: 50%;*/
+/*    height: auto;*/
+/*    position: relative;*/
+/*    z-index: 10;*/
+/*    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+/*}*/
+.staffContainer {
+    padding: 0 16px;
+}
+.staffContainer::after, .staffRow::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.staffTitle {
+    color: grey;
+}
+.staffButton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
-
-.sideStaff {
-    margin: 0 5vw;
-    width: 50vw;
-    font-size: 0.7vw;
+.staffButton:hover {
+    background-colour: #555;
 }
 /*End of Staff*/
 
@@ -786,12 +835,11 @@ header ul li a:hover, header ul li a.active {
 
 /*START OF CONTACT PAGE*/
 .StaffContactImages {
-    width: auto;
+    width: 100%;
     margin: 5px;
     height: 25em;
 }
 .StaffContactText {
-
 }
 h4 {
     display: inline;
