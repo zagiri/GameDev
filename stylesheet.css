@@ -117,18 +117,16 @@ header ul li a:hover, header ul li a.active {
 
 .bag-quantity {
     position: relative;
+    top: 5px;
     text-align: center;
     color: white;
-    font-size:1vw;
+    font-size: 1.2vw;
     font-weight: 600;
     font-family: 'Press Start 2P', cursive;
 
 }
 
 /*Billing form*/
-
-
-
 
 #close-billing {
     position: absolute;
@@ -252,7 +250,23 @@ header ul li a:hover, header ul li a.active {
     width: 100%;
 }
 
+.terms-button {
+    padding: 20px 0;
+}
+
+.terms-button i {
+    position: absolute;
+
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    /*visibility: hidden;*/
+}
+
 .form-control.success input {
+    border-color: springgreen;
+}
+
+.terms-button.success input {
     border-color: springgreen;
 }
 .form-control.success i.bxs-check-circle {
@@ -269,10 +283,9 @@ header ul li a:hover, header ul li a.active {
     visibility: visible;
 }
 
-
 .form-control i {
     position: absolute;
-    top: 36px;
+    top: 30px;
     right: 5px;
     font-size: 25px;
     visibility: hidden;

@@ -1,3 +1,7 @@
+
+
+
+
 // Cart
 
 let cartIcon = document.querySelector("#cart-icon");
@@ -12,11 +16,13 @@ let billingForm = document.querySelector(".billing-form");
 
 // form
 const form = document.getElementById('form');
-const button = document.getElementsByClassName('form-button')
+// const button = document.getElementsByClassName('form-button')
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const confirmEmail = document.getElementById('confirm-email');
 const phoneNo = document.getElementById('phone');
+const product = document.getElementById('product')
+
 
 //disable card at startup
 const cardNum = document.getElementById('cardNumber')
@@ -97,7 +103,7 @@ function reset() {
 
 }
 
-
+// form control section
 function checkInputs(){
     const nameValue = name.value.trim();
     const emailValue = email.value.trim();
@@ -152,11 +158,21 @@ function checkInputs(){
     }
 
 
+
+    if (product.value == '' || product.value == null) {
+        setErrorFor(product, 'Please select who to buy product for');
+    } else {
+        setSuccessFor(product);
+        count += 1
+    }
+
+    console.log(count)
     if (count === 4) {
         cardNum.disabled = false
         cardExpiry.disabled = false
         cardCCV.disabled = false
         checkoutButton.disabled = false
+
     } else {
         console.log(count)
     }
