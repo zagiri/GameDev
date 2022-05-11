@@ -676,34 +676,87 @@ header ul li a:hover, header ul li a.active {
 /* Styling for Game */
 
 .game {
-    margin-top: 2rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.image-section {
+.gallery {
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px,1fr));
-    width: 78%;
-    height: auto;
-    margin: 0 auto;
-    border: solid 10px red;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 60%;
+    grid-gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.game-box {
-    position: relative;
-    width: auto;
-    margin: 20px;
-    height: 25em;
-    border: solid 10px pink;
-
+.img-container {
+    overflow: hidden;
 }
 
-.game-box img {
-    margin: 0 auto;
-    display: block;
+.img-container img {
     width: 100%;
-    height: 23em;
-
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
 }
+
+.img-container img:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition:  0.25s ease-out;
+}
+
+
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-img {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: ALL 0.25s ease-out;
+}
+
+
+.modal-img.open {
+transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-details  {
+    background: white;
+}
+
+
+
+.modal .caption {
+     position: absolute; /* Position the background text */
+     color: white;
+     font-size: 1em;
+     position: absolute;
+     bottom: 28%;
+     left: 50%;
+     transform: translate(-50%, 50%);
+     background: rgb(0, 0, 0); /* Fallback color */
+     background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+     padding: 20px; /* Some padding */
+ }
+
 /* End of styling for Game */
 
 
@@ -787,7 +840,7 @@ header ul li a:hover, header ul li a.active {
 
 
 .shop-item-button {
-    background-color: #447caa; /* Green */
+    background-color: #447caa;
     border: none;
     color: white;
     padding: 10px;
@@ -1124,3 +1177,192 @@ body{
 
      color: #000000;
  }
+
+/*footer*/
+
+.footer-distributed{
+    background: #447caa;
+
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    position: absolute;
+    left: 0;
+
+    box-shadow: -38px 31px 5px 0px rgba(7,68,125,0.44);
+    -webkit-box-shadow: -38px 31px 5px 0px rgba(7,68,125,0.44);
+    -moz-box-shadow: -38px 31px 5px 0px rgba(7,68,125,0.44);
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span{
+    color:  white;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  whitesmoke;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  lightgrey;
+    text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  silver;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+
+}

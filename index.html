@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel=" stylesheet" href="homeStyle.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <title>Amazing wow</title>
     </head>
     <body>
@@ -21,94 +22,150 @@
 
         </section>
         <div class="sec" id="sec">
-            <h2>Main Body</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                <br><br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                <br><br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+            <div class="text-section">
+<!--                first card-->
+                <div class="card-section">
+                    <div class="container">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="/assets/unpacking.jpg">
+                            </div>
+                            <div class="contentBx">
+                                <h2>Unpacking</h2>
+                                <div class="description">
+                                    <h4>Unpacking is a zen puzzle game about the familiar experience of pulling possessions out of boxes and fitting them into a new home. </h4>
+                                </div>
+                                <a href="store.html">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                second card-->
+                <div class="card-section">
+                    <div class="container">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="/assets/keywe-key-art.jpg">
+                            </div>
+                            <div class="contentBx">
+                                <h2>Key We</h2>
+                                <div class="description">
+                                    <h4>KeyWe is a cute, co-operative postal puzzler starring Jeff and Debra, two small kiwi birds working in a whimsical post office. </h4>
+                                </div>
+                                <a href="store.html">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-details">
+                    <h2>What we do!</h2>
+                    <p>
+                        <em>
+                        <strong>"</strong><br>
+                            Here at Spaghetti code, We believe in power to the fan, and it really shows in our products!
+                            We work hard to make sure that our fans are buying a game that they are completely into with no
+                            bumps or hitches and that they know exactly what they are getting when they buy it. Our team loves
+                            seeing all our customers feedback and responses, even constructive feedback<br><strong class="right">"</strong></em>
+                    </p>
+                </div>
+            </div>
+
+
         </div>
 
 
+<!--Slideshow section-->
 
-    <div class="slide-section">
-        <div class="slideshow">
-            <div class="slides">
-<!--                radio start-->
-                <input type="radio" name="radia-btn" id="radio1">
-                <input type="radio" name="radia-btn" id="radio2">
-                <input type="radio" name="radia-btn" id="radio3">
-<!--                radio end-->
+    <div class="slide-bg">
+        <div class="slide-section">
+            <div class="slideshow">
+                <div class="slides">
+    <!--                radio start-->
+                    <input type="radio" name="radia-btn" id="radio1">
+                    <input type="radio" name="radia-btn" id="radio2">
+                    <input type="radio" name="radia-btn" id="radio3">
+    <!--                radio end-->
 
-<!--                image start-->
-                <div class="slide first">
-                    <img src="/assets/slider_images/graphic-designer-gaming-industry-talking-detail-with-his-colleague-analyzing-3d-design-level-explaining-production-creative-ideas-game-creators-working-videogame-illustration-company-office.jpg">
+    <!--                image start-->
+                    <div class="slide first">
+                        <img src="/assets/slider_images/graphic-designer-gaming-industry-talking-detail-with-his-colleague-analyzing-3d-design-level-explaining-production-creative-ideas-game-creators-working-videogame-illustration-company-office.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/slider_images/close-up-streamer-woman-talking-into-professional-microphone-home-studio-online-streaming-cyber-performing-gaming-tournament-using-technology-network-wireless.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/slider_images/videogamer-winning-first-person-shooter-tournament-using-rgb-keyboard-professional-headphones-pro-player-man-talking-with-other-players-online-game-competition-powerful-computer.jpg">
+                    </div>
+    <!--                image end-->
+    <!--                auto navigate-->
+                    <div class="navigation">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="/assets/slider_images/5258892.jpg">
-                </div>
-                <div class="slide">
-                    <img src="/assets/slider_images/2738.jpg">
-                </div>
-<!--                image end-->
-<!--                auto navigate-->
-                <div class="navigation">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
+    <!--            manual navigation-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
                 </div>
             </div>
-<!--            manual navigation-->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-            </div>
-        </div>
-        <div class="slide-details">
-            <h2>Spaghetti Code</h2>
-            <div class="slide-text">
-                <em>"We make spaghetti code look good!"</em>
-            </div>
+            <div class="slide-details">
+                <h2>Spaghetti Code</h2>
+                <div class="slide-text">
+                    <em>"We make spaghetti code look good!"</em>
+                </div>
 
+            </div>
         </div>
     </div>
+
+<!--    other section-->
+
+    <div class="sec2">
+        <!-- Site footer -->
+        <script src="/assets/JavaScript/footer.js"></script>
+    </div>
+
+
+
+
+
+
+
+<!--    JavaScript for parallax-->
     <script>
 
         let firstParticle = document.getElementById('firstParticle')
         let text = document.getElementById('text')
         let secondParticle = document.getElementById('secondParticle')
-        let mist = document.getElementById('mist')
 
+
+
+        // waiting for scroll event to fire then do specific task
         window.addEventListener('scroll', function (){
             let value = window.scrollY;
-            firstParticle.style.left = value * -0.25 + 'px';
-            secondParticle.style.left = value * 0.25 + 'px';
+            firstParticle.style.left = value * -0.25 + 'px'; //moves particle to the left
+            secondParticle.style.left = value * 0.25 + 'px'; //moves particle to the right
 
-            // mist.style.top = value * 0.5 + 'px';
             text.style.marginBottom = value * 1.5 + 'px';
         })
-         var counter = 1;
 
+        // Slider function
+         var counter = 1;
+        //automatic slider
         setInterval(function (){
             document.getElementById('radio' + counter).checked = true;
             counter++;
-            if (counter > 3 ) {
+            if (counter > 3 ) { // if on last image slide back to first image
                 counter = 1;
             }
         }, 5000);
     </script>
-
     </body>
+
+
+
 </html>
