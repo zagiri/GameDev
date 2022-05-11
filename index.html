@@ -7,6 +7,7 @@
     </head>
     <body>
 
+    <div class="header-nav">
         <header>
 
             <div class="logo"><a href="index.html"><img src="/assets/logoPNG_DropShadow.png" alt="logo" class="logo"></a></div>
@@ -20,6 +21,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </header>
+    </div>
         <section>
             <img src="assets/parallax/09_Forest.png" id="bush">
             <img src="assets/parallax/08_Forest.png" id="skyblueTree">
@@ -53,32 +55,55 @@
             </p>
         </div>
 
-        <div class="sec" id="secs">
-            <h2>Main Body</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                <br><br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                <br><br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </div>
 
+
+    <div class="slide-section">
+        <div class="slideshow">
+            <div class="slides">
+<!--                radio start-->
+                <input type="radio" name="radia-btn" id="radio1">
+                <input type="radio" name="radia-btn" id="radio2">
+                <input type="radio" name="radia-btn" id="radio3">
+<!--                radio end-->
+
+<!--                image start-->
+                <div class="slide first">
+                    <img src="/assets/slider_images/graphic-designer-gaming-industry-talking-detail-with-his-colleague-analyzing-3d-design-level-explaining-production-creative-ideas-game-creators-working-videogame-illustration-company-office.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/assets/slider_images/5258892.jpg">
+                </div>
+                <div class="slide">
+                    <img src="/assets/slider_images/2738.jpg">
+                </div>
+<!--                image end-->
+<!--                auto navigate-->
+                <div class="navigation">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+<!--            manual navigation-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+        <div class="slide-details">
+            <h2>Spaghetti Code</h2>
+            <div class="slide-text">
+                <em>"We make spaghetti code look good!"</em>
+            </div>
+
+        </div>
+    </div>
     <script>
 
         let firstParticle = document.getElementById('firstParticle')
         let text = document.getElementById('text')
         let secondParticle = document.getElementById('secondParticle')
-        let bush2 = document.getElementById('bush2')
         let mist = document.getElementById('mist')
 
         window.addEventListener('scroll', function (){
@@ -86,13 +111,18 @@
             firstParticle.style.left = value * -0.25 + 'px';
             secondParticle.style.left = value * 0.25 + 'px';
 
-            mist.style.top = value * 0.95 + 'px';
-            bush2.style.top = value * 0.95 + 'px';
+            // mist.style.top = value * 0.5 + 'px';
             text.style.marginBottom = value * 1.5 + 'px';
-
-
         })
+         var counter = 1;
 
+        setInterval(function (){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3 ) {
+                counter = 1;
+            }
+        }, 5000);
     </script>
 
     </body>

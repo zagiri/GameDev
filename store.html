@@ -18,8 +18,8 @@
             <li><a href="store.html" class="active">Store</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><i class='bx bxs-shopping-bag' id="cart-icon"></i>
-            <span class="bag-quantity">0</span>
+            <li>
+                <i class='bx bxs-shopping-bag' id="cart-icon"></i>
                 <div class="cart">
                     <h2 class="cart-title">Your Cart</h2>
                     <!--Content-->
@@ -36,6 +36,7 @@
                     <i class='bx bx-x' id="close-cart"></i>
                 </div>
             </li>
+            <li><span class="bag-quantity">0</span></li>
         </ul>
             </header>
 
@@ -120,11 +121,15 @@
                                 <option value="yourself">Yourself</option>
                                 <option value="someone">Someone else</option>
                             </select>
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
 
                         </div>
                         <div class="terms-button">
-                            <label for="agree">agree on terms and conditions</label>
+                            <label for="agree">Agree on terms and conditions</label>
                             <input type="checkbox" id="agree" name="agree">
+                            <i class='bx bxs-check-circle'></i>
                         </div>
 
                         <div class="form-buttons">
