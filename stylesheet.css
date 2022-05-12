@@ -922,6 +922,14 @@ transform: translate(-50%, -50%) scale(1);
     box-sizing: border-box;
     outline: none;
 }
+.hr {
+    height:10px;
+    border-width:10px;
+    size:1px;
+    colour:grey;
+    background-colour:grey"
+}
+
 
 /*Start of contact form*/
 body{
