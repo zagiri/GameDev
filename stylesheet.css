@@ -454,7 +454,7 @@ header ul li a:hover, header ul li a.actives {
 /*end card styles*/
 
 
-/*Start of About page*/
+/*Start of Staff page*/
 .Staff {
     width: 75%;
     margin: 10% auto;
@@ -544,7 +544,7 @@ header ul li a:hover, header ul li a.actives {
 .staffButton:hover {
     background-colour: #555;
 }
-/*End of About*/
+/*End of Staff*/
 
 /*cart*/
 .cart {
