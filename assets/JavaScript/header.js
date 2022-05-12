@@ -1,7 +1,7 @@
 
 
 //variablel placeholder
-var active = `class="active"`
+var active = `class="actives"`
 
 var home;
 var game;
@@ -39,7 +39,7 @@ if ( !document.URL.includes("store.html") ) {
                 <li><a href="game.html" ${game}>Game</a></li>
                 <li><a href="staff.html" ${staff}>Staff</a></li>
                 <li><a href="store.html">Store</a></li>
-                <li><a href="about.html" ${about}>About</a></li>
+                <li><a href="about.html" ${about}>FAQ</a></li>
                 <li><a href="contact.html" ${contact}>Contact</a></li>
             </ul>
         </header>
@@ -53,8 +53,8 @@ if ( !document.URL.includes("store.html") ) {
                 <li><a href="index.html" >Home</a></li>
                 <li><a href="game.html">Game</a></li>
                 <li><a href="staff.html">Staff</a></li>
-                <li><a href="store.html" class="active">Store</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="store.html" class="actives">Store</a></li>
+                <li><a href="about.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li>
                     <i class='bx bxs-shopping-bag' id="cart-icon"></i>

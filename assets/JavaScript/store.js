@@ -73,7 +73,7 @@ function emailAlert(){
     const small = formControl.querySelector('small');
     small.innerText = 'Email must be correct as it will be used for Confirmation'
 
-    formControl.id = 'active';
+    formControl.id = 'actives';
 
     console.log(formControl.id)
     console.log(small.innerText)
@@ -249,20 +249,20 @@ function isEmail(email) {
 
 //opens cart
 cartIcon.onclick = () => {
-    cart.classList.add("active");
+    cart.classList.add("actives");
 };
 
 
 //closes cart
 closeCart.onclick = () => {
-    cart.classList.remove("active");
+    cart.classList.remove("actives");
 };
 
 
 //closes billing form
 
 closeBilling.onclick = () => {
-    cart.classList.add("active");
+    cart.classList.add("actives");
     billingForm.className = "billing-form disable"
     billingContainer.className = "billing-container disable"
 };

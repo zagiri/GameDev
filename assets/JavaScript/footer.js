@@ -24,17 +24,17 @@ document.write(`<footer class="footer-distributed">
             <div class="footer-center">
 
                 <div>
-                    <i class="fa fa-map-marker"></i>
-                    <p><span>Wintec | Waikato Institute of Technology, </span> Tristram Street, Whitiora, Hamilton 3200</p>
+                    <i class='bx bx-map' ></i>
+                    <p><span>Spaghetti Code | Spaghetti Code Company New Zealand, </span> Tristram Street, Whitiora, Hamilton 3200</p>
                 </div>
 
                 <div>
-                    <i class="fa fa-phone"></i>
+                    <i class='bx bx-phone' ></i>
                     <p>+1.555.555.5555</p>
                 </div>
 
                 <div>
-                    <i class="fa fa-envelope"></i>
+                    <i class='bx bx-envelope'></i>
                     <p><a href="#">ghetti.help@spaghetticode.co.nz</a></p>
                 </div>
 

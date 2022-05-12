@@ -9,69 +9,84 @@
 <body>
     <script src="/assets/JavaScript/header.js"></script>
     <!-- Body  -->
-    <div class="Staff">
-        <div class="topStaff" style="flex-grow: 1; padding: 20px;">
-            </br>
-            <h1>This is our team here at Spaghetti Code</h1><br>
-            <h3>Here at Spaghetti code we design games for you, the fans.<br>
-                Our team knows that no matter what at the end of the day the person who will receive and ultimately review and enjoy our games are the fans, so thats why we design with you in mind and not other corporate shells who want to try to tamper with games and game dev companies reputations for the possibility of a bigger pay.</h3>
-            <div class="nav" style="flex-grow: 8; padding: 20px;"></div>
-        </div>
-        <div class="staffRow">
-            <div class="staffColumn">
-                <div class="staffCard">
-                    <img src="/assets/JeffKaplan.jpg" alt="JeffKaplan">
-                    <div class="staffContainer">
-                        <h2>Larry Rivida</h2>
-                        <p class="staffTitle">Lead Games Designer</p>
-                        </br>
-                        <p>Larry is our best coder and loves to code
-                        </p>
-                        </br>
-                        <p><a href="Larry.Rivada@spaghetti.com">Larry.Rivada@spaghetti.com</a></p>
-                        </br>
-                        </br>
-                        <p><button class="staffButton">Contact</button></p>
-                    </div>
+    <main>
+        <h1 class="faq-heading">FAQ'S</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+                <!-- faq question -->
+                <h1 class="faq-page">FaQ 1</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>FaQ1 answer</p>
                 </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">FaQ 2</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>FaQ2 answer</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+                <h1 class="faq-page">FaQ3</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>FaQ3 answer</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-four">
+                <h1 class="faq-page">FaQ4</h1>
+                <div class="faq-body">
+                    <p>FaQ4 answer</p>
+                </div>
+            </div>
+        </section>
+        <div class="ticket-modal" id="ticket-modal">
+
+            <div class="ticket-div">
+                <form class="ticket-form" id="ticket-form">
+                    <h2>Submit a Ticket</h2>
+                    <label for="ticket-type">Ticket Type</label>
+                    <select id="ticket-type" name="ticket-type">
+                        <option value="bug">Report a Bug</option>
+                        <option value="tech-issue">Technical Issue</option>
+                        <option value="in-game-issue">In Game Issue</option>
+                        <option value="general-question">General Question</option>
+                        <option value="biling-issue">Billing issues</option>
+                    </select>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your First name...">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your Last name...">
+                    <label for="ticket-content">Issue</label>
+                    <textarea id="ticket-content" name="subject" placeholder="Issue" style="height:200px"></textarea>
+
+                    <input class="submit-btn" type="submit" value="Submit">
+                </form>
+
+
+
             </div>
 
-            <div class="staffColumn">
-                <div class="staffCard">
-                    <img src="/assets/DripKaplan.jpg" alt="DripKaplan">
-                    <div class="staffContainer">
-                        <h2>Paul Allen</h2>
-                        <p class="staffTitle">AI Programmer</p>
-                        </br>
-                        <p>Paul creates amazing and very in-depth AI for our games
-                        </p>
-                        </br>
-                        <p><a href="Paul.Allen@spaghetti.com">Paul.Allen@spaghetti.com</a></p>
-                        </br>
-                        </br>
-                        <p><button class="staffButton">Contact</button></p>
-                    </div>
-                </div>
-            </div>
-            <div class="staffColumn">
-                <div class="staffCard">
-                    <img src="/assets/Gaben.jpg" alt="DripKaplan">
-                    <div class="staffContainer">
-                        <h2>Trent Maunsell-Beanland</h2>
-                        <p class="staffTitle">Environment Artist</p>
-                        </br>
-                        <p>Trent puts together outstanding environments for our games
-                        </p>
-                        </br>
-                        <p><a href="Trent.Maunsell-Beanland@spaghetti.com">Trent.Maunsell-Beanland@spaghetti.com</a></p>
-                        <p></p>
-                        <p><button class="staffButton">Contact</button></p>
-                    </div>
-                </div>
-            </div>
+            <<div class="frm-modal">
+            <from src="ticket-form" alt="" class="modal-frm" />
+
         </div>
-    </div>
-    </br>
+
+        </div>
+
+        <button class="ticket-btn" id="ticket-btn">Submit a Ticket</button>
+
+    </main>
+
+
+<!--    <script src="/assets/about.js"></script>-->
         <!---->
     <!-- footer  -->
     <script src="/assets/JavaScript/footer.js"></script>
