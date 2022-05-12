@@ -681,6 +681,7 @@ header ul li a:hover, header ul li a.active {
     box-sizing: border-box;
 }
 .gallery {
+    padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 60%;
