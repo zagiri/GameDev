@@ -46,6 +46,32 @@
     </div>
 
         <!-- End of Body  -->
+    <script>
+
+        const modal = document.querySelector(".modal");
+        const preview = document.querySelectorAll(".gallery img");
+        const original = document.querySelector(".modal-img");
+        const  caption = document.querySelector(".caption");
+
+        preview.forEach(preview => {
+            preview.addEventListener('click', () => {
+                modal.classList.add("open");
+                original.classList.add("open");
+                //Dynamically change img and text
+                const originalSrc = preview.getAttribute("data-original");
+                original.src = originalSrc
+                const altText = preview.alt;
+                caption.textContent = altText;
+            });
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target.classList.contains("modal")) {
+                modal.classList.remove('open');
+                original.classList.remove('open');
+            }
+        });
+    </script>
     <script src="/assets/JavaScript/footer.js"></script>
 </body>
 </html>
