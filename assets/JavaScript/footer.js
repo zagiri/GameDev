@@ -7,15 +7,15 @@ document.write(`<footer class="footer-distributed">
                 <p class="footer-links">
                     <a href="#" class="link-1">Home</a>
 
-                    <a href="#">Game</a>
+                    <a href="game.html">Game</a>
 
-                    <a href="#">Store</a>
+                    <a href="Store.html">Store</a>
 
-                    <a href="#">About</a>
+                    <a href="staff.html">About</a>
 
-                    <a href="#">FAQ</a>
+                    <a href="about.html">Terms and Conditions</a>
 
-                    <a href="#">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </p>
 
                 <p class="footer-company-name">&copy; 2022 Spaghetti Code New Zealand, Inc. All rights reserved.</p>

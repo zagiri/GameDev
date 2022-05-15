@@ -56,25 +56,26 @@
                                 <option value="yourself">Yourself</option>
                                 <option value="someone">Someone else</option>
                             </select>
-                            <i class='bx bxs-check-circle'></i>
-                            <i class='bx bxs-error-circle' ></i>
+                            <i class='bx bxs-check-circle big'></i>
+                            <i class='bx bxs-error-circle big' ></i>
                             <small>Error Message</small>
 
                         </div>
                         <div class="terms-button">
                             <label for="agree">Agree on terms and conditions</label>
                             <input type="checkbox" id="agree" name="agree">
-                            <i class='bx bxs-check-circle'></i>
+                            <small>Please accept terms and servicese</small>
                         </div>
 
                         <div class="form-buttons">
                             <button type="submit">Submit</button>
                             <button type="reset">Reset</button>
+
                         </div>
                     </div>
                 </form>
 
-                <form action="" class="billing">
+                <form action="" class="billing" id="billing">
                     <div class="card">
                         <h1 class="card-title">
                             Enter Payment Information
@@ -83,12 +84,22 @@
                             <div class="card-col card-num">
                                 <label for="cardNumber" class="card-label">Card Number</label>
                                 <input type="text" class="card-input card-input-large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
+                                <small>Error</small>
                             </div>
-                            <div class="card-row">
-                                <div class="card-col"><label for="cardExpiry" class="card-label">Expiry Date</label><input type="text" class="card-input" id="cardExpiry" placeholder="xx/xx"></div>
+                            <div class="card-col card-num">
+                                <label for="cardName" class="card-label">Name On Card</label>
+                                <input type="text" class="card-input card-input-large" id="cardName" placeholder="Please enter your name">
+                                <small>Error</small>
                             </div>
-                            <div class="card-row">
-                                <div class="card-col"><label for="cardCCV" class="card-label"></label>CCV<input type="text" class="card-input" id="cardCCV" placeholder="xxx"></div>
+                            <div class="card-row card-num">
+                                <label for="cardExpiry" class="card-label">Expiry Date</label>
+                                <input type="text" class="card-input" id="cardExpiry" placeholder="xx/xx">
+                                <small>Error</small>
+                            </div>
+                            <div class="card-row card-num">
+                                <label for="cardCCV" class="card-label">CCV</label>
+                                <input type="text" class="card-input" id="cardCCV" placeholder="xxx">
+                                <small>Error</small>
                             </div>
                         </div>
                         <button type="checkout" id="checkout">Checkout</button>
@@ -217,7 +228,9 @@
         </div>
     </section>
 
-        <script src="/assets/JavaScript/footer.js"></script>
-        <script src="/assets/JavaScript/store.js"></script>
+<!--    calling javaScripts-->
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="/assets/JavaScript/footer.js"></script>
+    <script src="/assets/JavaScript/store.js"></script>
     </body>
 </html>

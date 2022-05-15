@@ -234,7 +234,6 @@ header ul li a:hover, header ul li a.actives {
     position: relative;
 }
 
-
 .form-control label {
     display: inline-block;
     margin-bottom: 5px;
@@ -259,7 +258,7 @@ header ul li a:hover, header ul li a.actives {
     position: absolute;
 
     font-size: 20px;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 500px;
     /*visibility: hidden;*/
 }
 
@@ -286,7 +285,14 @@ header ul li a:hover, header ul li a.actives {
 
 .form-control i {
     position: absolute;
-    top: 30px;
+    top: 36.5px;
+    right: 5px;
+    font-size: 25px;
+    visibility: hidden;
+}
+.form-control .big {
+    position: absolute;
+    top: 40px;
     right: 5px;
     font-size: 25px;
     visibility: hidden;
@@ -297,6 +303,19 @@ header ul li a:hover, header ul li a.actives {
     bottom: 0;
     right: 0;
     visibility: hidden;
+}
+
+.terms-button small {
+    position: absolute;
+    width: 100%;
+    margin: 0 0 0 2%;
+    visibility: hidden;
+}
+
+.terms-button.error small {
+    color: red;
+    visibility: visible;
+
 }
 .form-control.error small {
     color: indianred;
@@ -375,7 +394,29 @@ header ul li a:hover, header ul li a.actives {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 2rem;
+    margin-right: 50px;
 }
+
+.card-row small {
+    font-size: 15px;
+    position: absolute;
+    margin: 30px 0;
+
+    color:  indianred;
+    visibility: hidden;
+}
+
+.card-col small {
+    position: relative;
+    font-size: 15px;
+    visibility: hidden;
+}
+
+
+.activates small{
+    visibility: visible;
+}
+
 
 .card-title {
     font-weight: 600;
@@ -399,6 +440,21 @@ header ul li a:hover, header ul li a.actives {
 
     font-size: 1.2rem;
     color: black;
+
+    margin: 0 10px;
+    text-align: center;
+
+}
+
+.errors {
+
+    width: 5vw;
+
+    border: 1px solid indianred;
+    border-radius: 4px;
+
+    font-size: 1.2rem;
+    color: red;
 
     margin: 0 10px;
     text-align: center;

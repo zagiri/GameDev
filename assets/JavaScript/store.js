@@ -29,25 +29,33 @@ const email = document.getElementById('email');
 const confirmEmail = document.getElementById('confirm-email');
 const phoneNo = document.getElementById('phone');
 const product = document.getElementById('product')
+ const agreed = document.getElementById('agree')
 
 
 //disable store card at startup
-// on page load startup disable card until right info are entered
+// on page load startup disable card until right info are
 const cardNum = document.getElementById('cardNumber')
 const cardExpiry = document.getElementById('cardExpiry')
 const cardCCV = document.getElementById('cardCCV')
 const checkoutButton = document.getElementById('checkout')
+const cardName = document.getElementById('cardName')
 
-cardNum.disabled = true
-cardExpiry.disabled = true
-cardCCV.disabled = true
-checkoutButton.disabled = true
+ cardNum.disabled = true
+ cardExpiry.disabled = true
+ cardCCV.disabled = true
+ checkoutButton.disabled = true
+ cardName.disabled = true
 
 //event listeners for submit button, checked if button submit is pressed
 form.addEventListener('submit', (e) => {
     checkInputs();
     e.preventDefault()
 });
+
+ checkoutButton.addEventListener('click', (e) => {
+     checkValid()
+     e.preventDefault()
+ });
 
 // event listener for focusing on input box in store billing form
 email.addEventListener('focusin', (e) => {
@@ -65,6 +73,133 @@ form.addEventListener('reset', (e) => {
     reset()
     e.preventDefault()
 });
+
+
+ //card validation section
+
+// updates to today's date
+ var today = new Date();
+ var month = today.getMonth()+1
+
+ if (month < 10) {
+    month = "0" + month;
+ }
+
+ // for date validation used later on
+ var currentDate =(today.getFullYear().toString().slice(-2))+"-"+month;
+ var maxDate =((today.getFullYear()+10).toString().slice(-2))+"-"+month;
+
+ const billing = document.getElementById('billing');
+
+
+ // checking form validation for checkout section
+function checkValid() {
+    const nameValue = cardName.value.trim();
+    const cardExpiryValue = cardExpiry.value.trim();
+    const cardCCVValue = cardCCV.value.trim();
+    const cardNumberValue = cardNum.value.trim();
+
+    var count = 0 // count variable to count how many forms are completed.
+
+
+    if (nameValue === '' || nameValue == null) {
+        errorValid(cardName, "Please Enter Name!")
+    } else {
+        successValid(cardName)
+        count +=1
+    }
+
+    if (cardNumberValue === '' || cardNumberValue == null) {
+        errorValid(cardNum, "Please Enter Card Number!")
+    } else {
+        successValid(cardNum)
+        count +=1
+    }
+
+
+    if (cardExpiryValue === '' || cardExpiryValue == null) {
+        errorValid(cardExpiry, "Please Enter Card Expiry!")
+    } else {
+        if (cardExpiryValue.trim().length < 5) {
+            errorValid(cardExpiry, "Please Enter Correct Date!")
+        } else {
+            successValid(cardExpiry)
+            count +=1
+        }
+    }
+
+    if (cardCCVValue === '' || cardCCVValue == null) {
+        errorValid(cardCCV, "Please Enter CVV!")
+    } else {
+        if (cardCCVValue.length < 3) {
+            errorValid(cardCCV, "Please Enter valid CVV")
+        } else {
+            successValid(cardCCV)
+            count +=1
+        }
+    }
+        console.log(count)
+
+    if (count >= 4) { // if all forms are completed run alert
+        alert("Success! Order Placed Successfully")
+
+        //removes cart items (simulates buying items)
+        var cartContent = document.getElementsByClassName('cart-content')[0];
+        while  (cartContent.hasChildNodes()){
+            cartContent.removeChild(cartContent.firstChild);
+        }
+        updateTotal()
+
+        // close billing form
+        billingForm.className = "billing-form disable"
+        billingContainer.className = "billing-container disable"
+    }
+
+}
+
+// shows prompt on user!
+ function successValid(input) {
+     const formControl = input.parentElement;
+     formControl.classList.remove("activates");
+     console.log("hello World")
+
+ }
+
+ function errorValid(input, message) {
+     const formControl = input.parentElement;
+     const small = formControl.querySelector('small');
+     small.innerText = message
+
+     formControl.classList.add("activates");
+
+
+ }
+// cleave JS to validate inputs for card number, cvv and Expiry
+
+ var cleave = new Cleave('#cardNumber', {
+     creditCard: true,
+     delimiter: "-",
+     onCreditCardTypeChanged: function (type) {
+         if (type === "unknown") {
+             errorValid(cardNum, "Please enter a valid credit card")
+         } else {
+             successValid(cardNum)
+         }
+     }
+ });
+
+ var cleave = new Cleave('#cardExpiry', {
+     date: true,
+     dateMin: currentDate.toString(),
+     dateMax: maxDate.toString(),
+     delimiter: '-',
+     datePattern: ['m', 'y']
+ });
+
+ var cleave = new Cleave('#cardCCV', {
+     blocks: [3],
+     uppercase: true
+ });
 
 
 // method that alerts user to check email properly
@@ -96,6 +231,7 @@ function reset() {
     const emailValue = email.value.trim();
     const confirmValue = confirmEmail.value.trim();
     const phoneValue = phoneNo.value.trim();
+    const productValue = product.value.trim()
 
     const formControl = email.parentElement;
     const small = formControl.querySelector('small');
@@ -106,7 +242,6 @@ function reset() {
 
 //  if statement to check whether input box are not empty and run setResetFor() method
     if (nameValue !== '' || nameValue != null) {
-
         setResetFor(name); // passing a variable for appropriate input id b
     }
     if (emailValue !== '' || emailValue != null) {
@@ -122,6 +257,17 @@ function reset() {
 
         setResetFor(phoneNo);
     }
+    if (productValue !== '' || productValue != null) {
+
+        setResetFor(product);
+    }
+
+    if (productValue !== '' || productValue != null) {
+
+        setResetFor(agreed);
+    }
+
+
 
 
 }
@@ -187,22 +333,30 @@ function checkInputs(){
 
 
 
-    if (product.value == '' || product.value == null) {
+    if (product.value === '' || product.value == null) {
         setErrorFor(product, 'Please select who to buy product for');
     } else {
         setSuccessFor(product);
         count += 1
     }
 
+    if (agreed.checked == true) {
+        count += 1
+        setSuccessFor(agreed)
+    } else {
+        setErrorFor(agreed, 'Please accept terms and services');
+    }
+
+
 
     // count variable used to enable credit card. check if all forms are succeeded then proceed to fill credit card form
     console.log(count)
-    if (count >= 4) {
+    if (count >= 6) {
         cardNum.disabled = false
         cardExpiry.disabled = false
         cardCCV.disabled = false
         checkoutButton.disabled = false
-
+        cardName.disabled = false
     }
 
 
@@ -215,12 +369,22 @@ function setErrorFor(input, message) {
     const small = formControl.querySelector('small');
     small.innerText = message
 
-    formControl.className = 'form-control error';
+    if (formControl.classList.contains('form-control')) {
+        formControl.className = 'form-control error';
+    } else {
+        formControl.className = 'terms-button error';
+    }
+
 }
 
 function setSuccessFor(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control success';
+
+    if (formControl.classList.contains('form-control')) {
+        formControl.className = 'form-control success';
+    } else {
+        formControl.className = 'terms-button';
+    }
 
 }
 
@@ -232,12 +396,18 @@ function setResetFor(input) {
     value.value = '';
 
     const formControl = input.parentElement;
-    formControl.className = 'form-control';
+    if (formControl.classList.contains('form-control')) {
+        formControl.className = 'form-control';
+    } else {
+        formControl.className = 'terms-button';
+    }
 
     cardNum.disabled = true
     cardExpiry.disabled = true
     cardCCV.disabled = true
     checkoutButton.disabled = true
+    cardName.disabled = true
+    agreed.checked = false
 }
 
 
@@ -321,10 +491,6 @@ function  buyButtonClicked() {
         billingForm.className = "billing-form"
         billingContainer.className = "billing-container"
 
-        while  (cartContent.hasChildNodes()){
-            cartContent.removeChild(cartContent.firstChild);
-        }
-        updateTotal()
     } else {
         alert('please add item to cart');
         return;
