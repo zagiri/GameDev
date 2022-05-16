@@ -32,13 +32,16 @@ const product = document.getElementById('product')
  const agreed = document.getElementById('agree')
 
 
-//disable store card at startup
-// on page load startup disable card until right info are
+// variable placeholder for credit card divs
+
 const cardNum = document.getElementById('cardNumber')
 const cardExpiry = document.getElementById('cardExpiry')
 const cardCCV = document.getElementById('cardCCV')
 const checkoutButton = document.getElementById('checkout')
 const cardName = document.getElementById('cardName')
+
+ // on page load startup disable card until right info are
+ //disables store card at startup
 
  cardNum.disabled = true
  cardExpiry.disabled = true
@@ -94,6 +97,8 @@ form.addEventListener('reset', (e) => {
 
  // checking form validation for checkout section
 function checkValid() {
+
+    //variables for credit card inputs
     const nameValue = cardName.value.trim();
     const cardExpiryValue = cardExpiry.value.trim();
     const cardCCVValue = cardCCV.value.trim();
@@ -101,7 +106,7 @@ function checkValid() {
 
     var count = 0 // count variable to count how many forms are completed.
 
-
+    // name validation
     if (nameValue === '' || nameValue == null) {
         errorValid(cardName, "Please Enter Name!")
     } else {
@@ -109,14 +114,18 @@ function checkValid() {
         count +=1
     }
 
+    // check if credit card meets requirements
+    console.log()
     if (cardNumberValue === '' || cardNumberValue == null) {
         errorValid(cardNum, "Please Enter Card Number!")
+    } else if (cardNumberValue.length < 16) {
+        errorValid(cardNum, "Please enter a valid credit card")
     } else {
         successValid(cardNum)
         count +=1
     }
 
-
+    // expiry validation
     if (cardExpiryValue === '' || cardExpiryValue == null) {
         errorValid(cardExpiry, "Please Enter Card Expiry!")
     } else {
@@ -128,6 +137,7 @@ function checkValid() {
         }
     }
 
+    // cvv validation
     if (cardCCVValue === '' || cardCCVValue == null) {
         errorValid(cardCCV, "Please Enter CVV!")
     } else {
@@ -140,8 +150,10 @@ function checkValid() {
     }
         console.log(count)
 
+
+    //checkout button validation
     if (count >= 4) { // if all forms are completed run alert
-        alert("Success! Order Placed Successfully")
+        alert("Success! Order Placed Successfully") // simulates a purchase
 
         //removes cart items (simulates buying items)
         var cartContent = document.getElementsByClassName('cart-content')[0];
@@ -182,7 +194,8 @@ function checkValid() {
      onCreditCardTypeChanged: function (type) {
          if (type === "unknown") {
              errorValid(cardNum, "Please enter a valid credit card")
-         } else {
+         }
+         else {
              successValid(cardNum)
          }
      }
