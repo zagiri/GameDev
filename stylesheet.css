@@ -38,7 +38,7 @@ header .search-container {
 header input[type=text] {
     padding: 6px;
     margin-left: 20px;
-    font-size: 17px;
+    font-size: 18px;
     border: none;
 }
 
@@ -545,7 +545,7 @@ header ul li a:hover, header ul li a.actives {
 /*Start of Staff page*/
 .Staff {
     width: 75%;
-    margin: 10% auto;
+    margin: 5% auto;
     text-align: center;
     border-radius: 20px;
     box-shadow: -8px 10px 0px 0px rgba(0,0,0,0.17);
