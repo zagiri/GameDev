@@ -564,8 +564,6 @@ function updateTotal() {
     var cartContent = document.getElementsByClassName('cart-content')[0];
     var cartBoxes = document.getElementsByClassName('cart-box');
 
-
-
     var bag_size = 0;
     var total = 0;
 

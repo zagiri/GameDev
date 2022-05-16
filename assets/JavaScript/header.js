@@ -41,6 +41,14 @@ if ( !document.URL.includes("store.html") ) {
                 <li><a href="store.html">Store</a></li>
                 <li><a href="about.html" ${about}>FAQ</a></li>
                 <li><a href="contact.html" ${contact}>Contact</a></li>
+                <li>
+                    <div class="search-container">
+                        <form class="search-form" action="/action_page.php">
+                           <input type="text" placeholder="Search.." name="search">
+                        </form>
+                    </div>
+                </li>
+                 <li><button type="submit"><i class='bx bx-search'></i></li>
             </ul>
         </header>
     </div>`)
@@ -75,6 +83,15 @@ if ( !document.URL.includes("store.html") ) {
                     </div>
                 </li>
                 <li><span class="bag-quantity">0</span></li>
+                                <li>
+                    <div class="search-container">
+                        <form class="search-form" action="/action_page.php">
+                           <input type="text" placeholder="Search.." name="search">
+                        </form>
+                    </div>
+                </li>
+                 <li><button type="submit"><i class='bx bx-search'></i></li>
+            </ul>
             </ul>
         </header>
         

@@ -28,6 +28,38 @@ body {
 
 }
 
+/*header search bar*/
+header .search-container {
+    float: right;
+    /*position: static;*/
+
+}
+
+header input[type=text] {
+    padding: 6px;
+    margin-left: 20px;
+    font-size: 17px;
+    border: none;
+}
+
+header button {
+    float: right;
+    position: relative;
+    padding: 6px 10px;
+    /*margin-top: 8px;*/
+    /*margin-right: 16px;*/
+    margin-left: -20px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: #ccc;
+}
+
+
 img { /*Disables image dragging*/
     -webkit-user-drag: none;
     -khtml-user-drag: none;
@@ -1506,6 +1538,15 @@ body{
     margin-right: auto;
 }
 
+.ticket-form input {
+    width: 100%;
+    padding: 1.5%;
+}
+
+.submit-btn {
+    justify-content: center;
+}
+
 .ticket-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -1536,4 +1577,20 @@ body{
 
 .modal-frm.open {
     transform: translate(-50%, -50%) scale(1);
+}
+
+
+.ticket-btn {
+    background-color: #555555;
+    border: none;
+    color: white;
+
+    position: relative;
+
+
+width: 100%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
 }

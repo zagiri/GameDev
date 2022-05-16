@@ -763,3 +763,35 @@ section img#darkerBlueTree {
     }
 
 }
+
+
+/*header search bar*/
+header .search-container {
+    float: right;
+    /*position: static;*/
+
+}
+
+header input[type=text] {
+    padding: 6px;
+    margin-left: 20px;
+    font-size: 17px;
+    border: none;
+}
+
+header button {
+    float: right;
+    position: relative;
+    padding: 6px 10px;
+    /*margin-top: 8px;*/
+    /*margin-right: 16px;*/
+    margin-left: -20px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: #ccc;
+}
