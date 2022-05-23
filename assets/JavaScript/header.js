@@ -12,7 +12,7 @@ var contact;
 
 // for css styling
 // Would change value class to active if user is in said pages.
-if ( document.URL.includes("index.html") ) {
+if ( document.URL.includes("home.html") ) {
     home = active;
 } else if ( document.URL.includes("game.html") ) {
     game = active;
@@ -32,10 +32,10 @@ if ( document.URL.includes("index.html") ) {
 if ( !document.URL.includes("store.html") ) {
     document.write(`<div class="header-nav">
         <header>
-            <div class="logo"><a href="index.html"><img src="/assets/logoPNG_DropShadow.png" alt="logo" class="logo"></a></div>
+            <div class="logo"><a href="home.html"><img src="/assets/logoPNG_DropShadow.png" alt="logo" class="logo"></a></div>
 
             <ul>
-                <li><a href="index.html" ${home}>Home</a></li>
+                <li><a href="home.html" ${home}>Home</a></li>
                 <li><a href="game.html" ${game}>Game</a></li>
                 <li><a href="staff.html" ${staff}>Staff</a></li>
                 <li><a href="store.html">Store</a></li>
@@ -55,10 +55,10 @@ if ( !document.URL.includes("store.html") ) {
 } else {
     document.write(`
         <header>
-            <div class="logo"><a href="index.html"><img src="/assets/logoPNG_DropShadow.png" alt="logo" class="logo"></a></div>
+            <div class="logo"><a href="home.html"><img src="/assets/logoPNG_DropShadow.png" alt="logo" class="logo"></a></div>
         
             <ul>
-                <li><a href="index.html" >Home</a></li>
+                <li><a href="home.html" >Home</a></li>
                 <li><a href="game.html">Game</a></li>
                 <li><a href="staff.html">Staff</a></li>
                 <li><a href="store.html" class="actives">Store</a></li>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel=" stylesheet" href="homeStyle.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <title>Front Page</title>
+    </head>
+    <body>
+    <script src="/assets/JavaScript/header.js"></script>
+        <section>
+            <img src="assets/parallax/09_Forest.png" id="bush">
+            <img src="assets/parallax/08_Forest.png" id="skyblueTree">
+            <img src="assets/parallax/07_Forest.png" id="lighterBlueTree">
+            <img src="assets/parallax/06_Forest.png" id="darkblueTree">
+            <img src="assets/parallax/05_Particles.png" id="firstParticle">
+            <h2 id="text">"Ready...Set-y...Spaghetti!"</h2>
+            <img src="assets/parallax/04_Forest.png" id="darkerBlueTree">
+            <img src="assets/parallax/03_Particles.png" id="secondParticle">
+            <img src="assets/parallax/02_Bushes.png" id="bush2">
+            <img src="assets/01_Mist.png" id="mist">
+
+        </section>
+        <div class="sec" id="sec">
+            <div class="text-section">
+<!--                first card-->
+                <div class="card-section">
+                    <div class="container">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="/assets/unpacking.jpg">
+                            </div>
+                            <div class="contentBx">
+                                <h2>Unpacking</h2>
+                                <div class="description">
+                                    <h4>Unpacking is a zen puzzle game about the familiar experience of pulling possessions out of boxes and fitting them into a new home. </h4>
+                                </div>
+                                <a href="store.html">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                second card-->
+                <div class="card-section">
+                    <div class="container">
+                        <div class="card">
+                            <div class="imgBx">
+                                <img src="/assets/keywe-key-art.jpg">
+                            </div>
+                            <div class="contentBx">
+                                <h2>Key We</h2>
+                                <div class="description">
+                                    <h4>KeyWe is a cute, co-operative postal puzzler starring Jeff and Debra, two small kiwi birds working in a whimsical post office. </h4>
+                                </div>
+                                <a href="store.html">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-details">
+                    <h2>What we do!</h2>
+                    <p>
+                        <em>
+                        <strong>"</strong><br>
+                            Here at Spaghetti code, We believe in power to the fan, and it really shows in our products!
+                            We work hard to make sure that our fans are buying a game that they are completely into with no
+                            bumps or hitches and that they know exactly what they are getting when they buy it. Our team loves
+                            seeing all our customers feedback and responses, even constructive feedback<br><strong class="right">"</strong></em>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+<!--Slideshow section-->
+
+    <div class="slide-bg">
+        <div class="slide-section">
+            <div class="slideshow">
+                <div class="slides">
+    <!--                radio start-->
+                    <input type="radio" name="radia-btn" id="radio1">
+                    <input type="radio" name="radia-btn" id="radio2">
+                    <input type="radio" name="radia-btn" id="radio3">
+    <!--                radio end-->
+
+    <!--                image start-->
+                    <div class="slide first">
+                        <img src="/assets/slider_images/graphic-designer.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/slider_images/close-up-streamer.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="/assets/slider_images/videogamer-winning-first-person-shooter.jpg">
+                    </div>
+    <!--                image end-->
+    <!--                auto navigate-->
+                    <div class="navigation">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                </div>
+    <!--            manual navigation-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+            <div class="slide-details">
+                <h2>Spaghetti Code</h2>
+                <div class="slide-text">
+                    <em>"We make spaghetti code look good!"</em>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--    other section-->
+
+    <div class="sec2">
+        <!-- Site footer -->
+
+        <script src="/assets/JavaScript/footer.js"></script>
+    </div>
+
+
+
+
+
+
+
+<!--    JavaScript for parallax-->
+
+    <script>
+
+        let firstParticle = document.getElementById('firstParticle')
+        let text = document.getElementById('text')
+        let secondParticle = document.getElementById('secondParticle')
+
+
+
+        // waiting for scroll event to fire then do specific task
+        window.addEventListener('scroll', function (){
+            let value = window.scrollY;
+            firstParticle.style.left = value * -0.25 + 'px'; //moves particle to the left
+            secondParticle.style.left = value * 0.25 + 'px'; //moves particle to the right
+
+            text.style.marginBottom = value * 1.5 + 'px';
+        })
+
+        // Slider function
+         var counter = 1;
+        //automatic slider
+        setInterval(function (){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3 ) { // if on last image slide back to first image
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+    </body>
+
+
+
+</html>
